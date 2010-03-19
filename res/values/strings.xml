@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"><i>Locale</i> Pulse Trackball Plug-in</string>
+    <string name="plugin_name">Pulse trackball</string>
+    <string name="label">Pulse notification light</string>
+    <string name="website">http://chris.boyle.name/projects/ptlp</string>
+    <string name="onBlurb">Repeatedly (when screen is off)</string>
+    <string name="offBlurb">Once when notification arrives</string>
+</resources>
