@@ -3,6 +3,7 @@ package name.boyle.chris.ptlp;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.provider.Settings;
 
 /**
@@ -26,7 +27,9 @@ public final class FireReceiver extends BroadcastReceiver
 		 */
 		if (com.twofortyfouram.Intent.ACTION_FIRE_SETTING.equals(intent.getAction()))
 		{
-			final boolean toggle = intent.getBooleanExtra(Constants.INTENT_EXTRA_TOGGLE, false);
+			final Bundle forwardedBundle = intent.getBundleExtra(com.twofortyfouram.Intent.EXTRA_BUNDLE);
+			if (forwardedBundle == null) return;
+			final boolean toggle = forwardedBundle.getBoolean(Constants.INTENT_EXTRA_TOGGLE, false);
 			Settings.System.putInt(context.getContentResolver(), "notification_light_pulse", toggle ? 1 : 0);
 		}
 	}

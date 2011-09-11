@@ -83,7 +83,7 @@ public final class EditActivity extends Activity
 			 */
 			if (forwardedBundle != null)
 			{
-				final boolean checked = getIntent().getBooleanExtra(Constants.INTENT_EXTRA_TOGGLE, false);
+				final boolean checked = forwardedBundle.getBoolean(Constants.INTENT_EXTRA_TOGGLE, false);
 				tb.setChecked(checked);
 			}
 		}
